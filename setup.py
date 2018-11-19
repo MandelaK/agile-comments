@@ -34,7 +34,7 @@ while login is not True:
     print("oops sorry your password and user name combination is wrong")
     user_name = input("Please provide us with your user name\n")
     password = input("Please provide us with your password\n")
-    login = login = user.sign_in("name", "password")
+    login = user.sign_in("name", "password")
 
 
 
