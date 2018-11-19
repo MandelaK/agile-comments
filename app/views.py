@@ -19,9 +19,9 @@ class UserView():
             return True
 
     def sign_in(self, user_name, password):
-        submit_login = self.user.sign_in(user_name, password)
+        submit_login = self.user.sign_in_model(user_name, password)
 
-        if not submit_login:
-            return False
+        if submit_login == 404:
+            return "user does not exist"
         else:
             return True
