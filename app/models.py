@@ -25,3 +25,22 @@ class UserModel():
             return True
         except:
             return False
+
+    def get_user_by_name(self, username):
+        """Docstring for get username."""
+        cur = self.connection.cursor()
+        cur.execute(
+            """SELECT * FROM users WHERE user_name = %s ;""", (username,))
+        one = cur.fetchone()
+        return one
+
+    def sign_in_model(self, username, password):
+        """Docstring for sign_in method."""
+        user = self.get_user_by_name(username)
+        uname = user[1]
+        pwd = user[2]
+
+        if uname == username and pwd == password:
+            return True
+        else:
+            return False
