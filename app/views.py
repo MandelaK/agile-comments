@@ -13,7 +13,7 @@ class UserView():
         submit_sign_up = self.user.sign_up_model(user_name, password)
 
         if not submit_sign_up:
-            return "Error. Could not sign you up."
+            return False
 
         else:
-            return "Successfully registered."
+            return True
