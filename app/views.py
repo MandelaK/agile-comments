@@ -17,3 +17,11 @@ class UserView():
 
         else:
             return True
+
+    def sign_in(self, user_name, password):
+        submit_login = self.user.sign_in(user_name, password)
+
+        if not submit_login:
+            return False
+        else:
+            return True
