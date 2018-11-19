@@ -37,6 +37,7 @@ class UserModel():
     def sign_in_model(self, username, password):
         """Docstring for sign_in method."""
         user = self.get_user_by_name(username)
+
         if not user:
             return 404
         uname = user[1]
@@ -47,4 +48,3 @@ class UserModel():
         else:
             return False
 
-    def comments(self)

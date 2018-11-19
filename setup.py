@@ -29,12 +29,13 @@ while data is not True:
 print("Please you will be required to Enter your user_name and password\n")
 user_name = input("Please provide us with your user name\n")
 password = input("Please provide us with your password\n")
-login = user.sign_in("name", "password")
+login = user.sign_in(user_name, password)
 while login is not True:
     print("oops sorry your password and user name combination is wrong")
     user_name = input("Please provide us with your user name\n")
     password = input("Please provide us with your password\n")
     login = user.sign_in("name", "password")
+print("Successful logged_in")
 
 
 
