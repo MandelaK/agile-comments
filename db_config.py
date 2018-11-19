@@ -1,6 +1,7 @@
+"""Docstring for db_config."""
 import psycopg2
 
-url = "dbname='comments' host='localhost' port='5432' user='postgres' password='v0k3ch!97'"
+url = "dbname='comments' host='localhost' port='5432' user='app' password ='app'"
 
 
 def connection(url):
